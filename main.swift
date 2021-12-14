@@ -11,8 +11,8 @@ import Foundation
 // exit = end of program
 let aStack = MrCoxallStack<Int>()
 
-let allowedCommands = ["add", "pull", "show", "end"]
-print("Commands : add<number> - pull - show - end"
+let allowedCommands = ["add", "pop", "show", "end"]
+print("Commands : add<number> - pop - show - end"
       + "\nEnter the above commands only!")
 
 while true {
@@ -29,7 +29,7 @@ while true {
             }
         } else if userInput!.starts(with: allowedCommands[1]) {
             do {
-                try print("Removed: \(aStack.pull())")
+                try print("Removed: \(aStack.pop())")
             } catch {
                 print("The stack is empty.")
             }
